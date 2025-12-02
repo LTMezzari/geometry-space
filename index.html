@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Geometry Space</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./style/sheet.css" />
-    <script type="module" src="./src/controller/Game.js"></script>
-</head>
-
-<body>
-    <canvas id="game"></canvas>
-</body>
-
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Geometry Space</title>
+		<script type="text/javascript" src="./js/script.js"></script>
+		<link rel="shortcut icon" href="./Imagens/ico.ico"/>
+	</head>
+	<body style="margin:0; color:darkred">
+		<div id="game" style="width:100%;display:inline;">
+			<div id="titleScreen" style="position:fixed;text-align:center;left:40%;top:20%;">
+				<h1>Geometry Space</h1>
+				<button id="btnStart" onclick="Jogo.startGame()">Play</button>
+			</div>
+			<div id="hud" style="width:40%;height:125px;left:10px;top:10px;position:fixed;color:white;visibility:hidden">
+				<p id="score">Pontos:</p>
+				<p id="level">Level:</p>
+				<p id="enemies">Inimigos Restantes:</p>
+				<p id="lives">Vidas Restantes:</p>
+			</div>
+			<div id="endGame" style="position:fixed;top:40%;left:35%;text-align:center;visibility:hidden;">
+				<h1 id="scoreEndGame">Você Perdeu</br>Pontuação:</h1>
+			</div>
+			<div id="pause" style="position:fixed;top:40%;left:40%;text-align:center;visibility:hidden;">
+				<h1 id="paused">Jogo Pausado</h1>
+			</div>
+			<button style="right:10px;top:10px;position:fixed;visibility:hidden" id="btnRestart" onclick="Jogo.restartGame()">Recomeçar</button>
+			<button style="right:10px;top:50px;position:fixed;visibility:hidden" id="btnPause" onclick="Jogo.pauseGame()">Pausar</button>
+			<button style="left:41%;top:64%;position:fixed;visibility:hidden" id="btnTitleScreen" onclick="Jogo.returnToTitleScreen()">Voltar para a tela de inicio</button>
+			<canvas id="canvas" style="width:100%">Seu Brownser não suporta Canvas</script>
+		</div>
+	</body>
 </html>
